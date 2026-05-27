@@ -8,9 +8,9 @@ const videos = [
       "关于记忆、痛苦、存在与救赎的后人类寓言。在“飞升”成为普遍选择后，最后一个人类创造仿生人与机器人同伴，试图解答何为人类的终极困惑。",
     cover: "./assets/covers/last-poet-on-earth.jpg",
     platform: "bilibili",
-    bvid: "",
+    bvid: "BV132JRzuEKX",
     page: 1,
-    status: "pending",
+    status: "ready",
   },
   {
     title: "山的那边是什么",
