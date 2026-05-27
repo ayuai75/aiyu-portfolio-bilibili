@@ -563,12 +563,22 @@ h2 {
 .modal-dialog {
   position: relative;
   width: min(1040px, 100%);
+  max-height: calc(100svh - 48px);
   padding: 24px;
+  overflow-y: auto;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   background: #111416;
   color: #fff;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.36);
+}
+
+.modal-dialog--classic {
+  width: min(900px, 100%);
+}
+
+.modal-dialog--portrait {
+  width: min(560px, 100%);
 }
 
 .modal-close {
@@ -615,9 +625,10 @@ h2 {
 
 .modal-player {
   display: block;
-  width: 100%;
+  width: min(100%, var(--player-max-width, 100%));
+  margin: 0 auto;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: var(--player-ratio, 16 / 9);
   border-radius: 8px;
   background: #050505;
 }
@@ -756,6 +767,7 @@ h2 {
   }
 
   .modal-dialog {
+    max-height: calc(100svh - 28px);
     padding: 18px;
   }
 
