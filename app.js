@@ -23,9 +23,9 @@ const videos = [
     cover: "./assets/covers/beyond-the-mountain.png",
     platform: "douyin",
     douyinShareUrl: "https://v.douyin.com/JeoTqpM1qDg/",
-    douyinVideoId: "",
+    douyinVideoId: "7565731356559887625",
     ratio: "16:9",
-    status: "pending",
+    status: "ready",
   },
   {
     title: "囍",
