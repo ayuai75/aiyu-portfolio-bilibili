@@ -1,0 +1,9 @@
+{
+  "name": "aiyu-portfolio-bilibili",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "python3 -m http.server 5175 --bind 0.0.0.0"
+  }
+}
