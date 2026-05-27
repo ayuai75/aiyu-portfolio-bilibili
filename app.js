@@ -22,7 +22,7 @@ const videos = [
       "一只流浪猫的独白，用爪尖的自由哲学反衬人类世界的爱与囚笼。诗意背后，是无法选择的伤痛、寒冷与饥饿。",
     cover: "./assets/covers/beyond-the-mountain.png",
     platform: "douyin",
-    douyinShareUrl: "",
+    douyinShareUrl: "https://v.douyin.com/JeoTqpM1qDg/",
     douyinVideoId: "",
     ratio: "16:9",
     status: "pending",
