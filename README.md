@@ -1,6 +1,6 @@
-# 向AI进击的阿鱼个人主页嵌入测试版
+# 向AI进击的阿鱼个人主页抖音嵌入测试版
 
-这是独立于 `aiyu-portfolio` 的 GitHub Pages 测试项目，用于验证 B站和抖音 iframe 弹窗播放方案。
+这是独立于 `aiyu-portfolio` 的 GitHub Pages 测试项目，用于验证抖音 iframe 弹窗播放方案。
 
 ## 本地预览
 
@@ -13,38 +13,41 @@ npm run serve
 
 ## 视频配置
 
-所有作品配置集中在 `app.js` 顶部的 `videos` 数组中。现在 `bvid` 和 `douyinVideoId` 都为空时，点击作品会在当前页面弹出“视频即将上线”提示，不会创建 iframe。
-
-后续拿到 B站 BV 号后，使用 `platform: "bilibili"` 并填写对应作品的 `bvid`：
+所有作品配置集中在 `app.js` 顶部的 `videos` 数组中。当前版本不使用本地 mp4，也不会跳转到抖音页面。
 
 ```js
 {
-  title: "地球上最后一个诗人",
-  platform: "bilibili",
+  title: "作品标题",
+  description: "AIGC 视频作品展示",
+  cover: "./assets/covers/video1.jpg",
+  platform: "douyin",
+  douyinShareUrl: "",
   douyinVideoId: "",
-  bvid: "BVxxxxxxxxxx",
-  page: 1,
   ratio: "16:9",
+  status: "pending",
 }
 ```
 
-页面会自动生成 B站播放器地址：
+如果只有抖音分享链接，先填入 `douyinShareUrl`：
+
+```js
+douyinShareUrl: "https://v.douyin.com/xxxxxx/",
+douyinVideoId: "",
+```
+
+此时点击作品会显示：
 
 ```text
-https://player.bilibili.com/player.html?bvid=对应BV号&p=对应page&poster=1&autoplay=0&danmaku=0
+已添加抖音分享链接，请补充 VideoID 后播放。
 ```
 
-后续拿到抖音 VideoID 后，使用 `platform: "douyin"` 并填写 `douyinVideoId`：
+需要从 PC 端打开该分享链接，等页面跳转到最终地址后，从地址里提取 VideoID，再填入 `douyinVideoId`。
+
+如果已经有抖音 VideoID，直接填写：
 
 ```js
-{
-  title: "抖音作品",
-  platform: "douyin",
-  douyinVideoId: "抖音VideoID",
-  bvid: "",
-  page: 1,
-  ratio: "9:16",
-}
+douyinShareUrl: "",
+douyinVideoId: "抖音VideoID",
 ```
 
 页面会自动生成抖音播放器地址：
